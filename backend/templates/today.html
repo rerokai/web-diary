@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>/today</title>
+    <link rel="stylesheet" href="/frontend/style.css">
+</head>
+<body>
+
+    <div class="title">Today - {{.Date}}</div>
+
+    <div class="block">
+        <strong> TASKS </strong> <br>
+        {{range .Tasks}}
+        [{{if .Done}}x{{else}} {{end}}] {{.Title}}<br>
+        {{end}}
+    </div>
+
+    <div class="block">
+        <strong> NOTES </strong> <br>
+        <div class="notes">
+            {{.Notes}}
+        </div>
+    </div>
+
+    <div class="block">
+        <strong> HABITS </strong> <br>
+        <div class="habits">
+            {{range .Habits}}
+            <div class="habit-item">
+                [{{if .Done}}x{{else}} {{end}}] {{.Title}}<br>
+            </div>
+            {{end}}
+        </div>
+    </div>
+
+    <div class="block">
+        <strong>>PRODUCTIVITY </strong><br>
+        <div class="productivity-bar">
+            <div id="prodBar" class="bar-full" style="width: 0%;" ></div>
+            <span id="prodPercent">0%</span>
+</div>
+    
+</body>
+</html>
