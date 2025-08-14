@@ -1,0 +1,58 @@
+body{
+    background-color: #180029;
+    color: #FF0055 ;
+    font-family:monospace;
+    padding: 20px;
+}
+
+.title{
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 15px;
+
+}
+
+.block{
+    margin-bottom: 15px;
+
+}
+
+.notes{
+    white-space: pre-wrap;
+    margin-top: 3px;
+}
+
+.habbits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+.habbit-item{
+    display: inline-block;
+}
+
+.productivity-bar{
+    background-color: #180029;
+    border: 1px solid #ffff;
+    height: 12px;
+    width: 50%;
+    margin-top: 5px;
+}
+
+.bar-fill{
+    background-color: #ffff;
+    height: 100%;
+    width: 0;
+}
+
+.cursor{
+    margin-top: 20px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50%{
+        opacity: 0;
+    }
+}

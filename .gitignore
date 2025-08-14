@@ -1,0 +1,18 @@
+# Go build
+bin/
+pkg
+*.exe
+*.test
+*.out
+
+# Node/Front
+node_modules/
+dist/
+
+# Docker
+*.env
+
+# Sys
+.DS_Store
+Thumbs.db
+
